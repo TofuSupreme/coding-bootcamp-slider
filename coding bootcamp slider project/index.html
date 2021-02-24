@@ -15,125 +15,259 @@
 </head>
 
 <style>
- 
-  .container {
-    display: flex;
-    flex-wrap: wrap-reverse;
-  }
+    * {
+        margin: 0;
+        padding: 0;
+    }
 
-  .quotation-mark {
-    position: absolute;
-    margin-top: 110px;
-    margin-left: 360px
-  }
+    html {
+        font-size: 62.5%;
+    }
 
-  .testimony-remarks {
-    position: relative;
-    font-family: 'Inter', sans-serif;
-    text-align: left;
-    font-size: 32px;
-    font-weight: 300;
-    margin-right: 300px;
-    padding: 200px;
-  }
+    body {
+        min-height: 100vh;
+        font-family: 'Inter', sans-serif;
+        font-size: 1.8rem;
+        font-weight: 300;
+    }
 
-  .testimony-cite {
-    font-size: 20px;
-    font-weight: 700;
-  }
-  .testimony-cite-role {
-    font-size: 20px;
-    font-weight: 500;
-    color: gray;
-  }
+    .container {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        /* flex-wrap: wrap-reverse; */
+        flex-direction: row-reverse;
+    }
 
-.slider-image {
-  position: absolute;
-  margin-top: 100px;
-  margin-left: 800px;
-  z-index: -1;
-  border-radius: 10px;
-}
-.background {
-  position: absolute;
-  z-index: -2;
-  margin-left: 700px;
-}
+    .quotation-mark {
+        position: absolute;
+        margin-top: 9%;
+        margin-left: 20%
+    }
 
-@media only screen and (max-width:375px)
-{
-  .quotation-mark {
-    position: absolute;
-    width: 30%;
-    margin: 630px 0 0 300px;
-  }
+    .testimony-remarks {
+        position: relative;
+        text-align: left;
+        font-size: 3.2rem;
+        margin-right: 28%;
+        padding: 200px;
+    }
 
-  .background {
-  position: absolute;
-  width: 500px;
-  margin: 100px 0 0 150px;
-}
+    .caption{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: -150px;
+        margin-left: 200px;
+    }
+    .testimony-cite {
+        font-size: 2rem;
+        font-weight: 700;
+        font-style: normal;
+    }
 
-.slider-image {
-  position: absolute;
-  width: 400px;
-  z-index: -1;
-  margin: 140px 0 0 220px;
-}
-.testimony-remarks {
-    position: relative;
-    font-family: 'Inter', sans-serif;
-    text-align: center;
-    width: 100%;
-    font-weight: 300;
-    margin: 500px 0 0 -110px;
-  }
-}
-/* .toggle-icons{
-  display:flex;
-  justify-content: start;
-  z-index:3;
-} */
+    .testimony-role {
+        font-size: 2rem;
+        font-weight: 500;
+        color: gray;
+        padding-left: 7px;
+    }
+
+    .slider-image {
+        position: absolute;
+        top: 7%;
+        right: 10%;
+        z-index: -1;
+        border-radius: 1rem;
+        box-shadow: 0px 40px 50px -20px hsla(240, 38%, 20%, 0.3);
+    }
+
+    .toggle-icons {
+        position: absolute;
+        top: 65%;
+        right: 35%;
+    }
+
+    .prev-icon, #prev-btn {
+        border-radius: 50% 0 0 50%;
+        padding: 10px 15px 10px 13px;
+        background-color: white;
+        border-style:none;
+        margin-right: -6px;
+    }
+
+    .next-icon, #next-btn {
+        border-radius: 0 50% 50% 0;
+        padding: 10px 13px 10px 15px;
+        background-color: white;
+        border-style: none;
+    }
+
+    .background {
+        position: absolute;
+        z-index: -2;
+        margin-left: 700px;
+    }
+
+    .pattern-curve {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    } 
+
+    .attribution {
+        width: 100%;
+        margin: 0 auto;
+        position: absolute;
+        bottom: 10%;
+        text-align: center; 
+    }
+
+    @media only screen and (max-width:375px) {
+        .quotation-mark {
+        position: absolute;
+        width: 30%;
+        margin: 630px 0 0 300px;
+        }
+
+        .background {
+        position: absolute;
+        width: 500px;
+        margin-top: 10%;
+        margin-left: 35%
+        }
+
+        .slider-image {
+        position: absolute;
+        width: 400px;
+        z-index: -1;
+        margin-top: 10%;
+        margin-right: -60%
+        }
+
+        .testimony-remarks {
+        position: absolute;
+        font-family: 'Inter', sans-serif;
+        text-align: center;
+        width: 100%;
+        font-weight: 300;
+        font-size: 3rem;
+        margin-top: 80%;
+        margin-left: -15%
+        } 
+        .pattern-curve {
+        position: absolute;
+        bottom: -70%;
+    } 
+
+        .attribution {
+        width: 100%;
+        margin: 0 auto;
+        position: absolute;
+        bottom: 10%;
+        text-align: center; 
+    }
+    }
 </style>
-
 <body>
+    <div class="container"> 
+        <div class="left-side">
+            <img src="images/pattern-quotes.svg" alt="quotation-mark" class="quotation-mark">
 
-  <div class="container"> 
-    <div class="left-side">
-      <img src="images/pattern-quotes.svg" alt="quotation-mark" class="quotation-mark">
+            <blockquote class="testimony-remarks">
+                “ I’ve been interested in coding for a while but never taken the jump, until now. 
+                I couldn’t recommend this course enough. I’m now in the job of my dreams and so 
+                excited about the future. ”  
+            </blockquote>
 
-      <blockquote class="testimony-remarks">
-        “ I’ve been interested in coding for a while but never taken the jump, until now. 
-        I couldn’t recommend this course enough. I’m now in the job of my dreams and so 
-        excited about the future. ”  <br>
-        <cite class="testimony-cite">Tanya Sinclair</cite> <br>
-            <span class="testimony-cite-role">UX Engineer</span>
-          </blockquote>
-      <img src="images/pattern-curve.svg" alt="pattern-curve" class="pattern-curve">
-    </div>
+                <figcation class="caption">
+                    <cite class="testimony-cite">Tanya Sinclair</cite>
+                    <p class="testimony-role">UX Engineer</p>
+                </figcation>
+
+            </div>
+            <img src="images/pattern-curve.svg" alt="pattern-curve" class="pattern-curve">
+        
         <div class="right-side">
             <img class="slider-image" src="images/image-tanya.jpg">
 
-            <!-- <div class="toggle-icons">
-              <img src="images/icon-next.svg" alt="next-icon" class="next-icon">
-              <img src="images/icon-prev.svg" alt="prev-icon" class="prev-icon">
-            </div> -->
+            <div class="toggle-icons">
+                <button id="prev-btn">
+                    <img src="images/icon-prev.svg" alt="prev-icon" class="prev-icon">
+                </button>
+
+                <button id="next-btn">
+                    <img src="images/icon-next.svg" alt="next-icon" class="next-icon">
+                </button>
+            </div>
 
             <img src="images/pattern-bg.svg" alt="background" class="background">      
         </div>
-  </div>
+    </div>
+        
     
-    
-  <!-- “ If you want to lay the best foundation possible I’d recommend taking this course. 
-  The depth the instructors go into is incredible. I now feel so confident about 
-  starting up as a professional developer. ”
+    <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="#">TofuSupreme</a>.
+    </div>
 
-  John Tarkpor
-  Junior Front-end Developer -->
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+    <script>
+        const data = [
+            {
+                img: "images/image-tanya.jpg",
+                testimony: `“I’ve been interested in coding for a while but never taken the jump, until now. I couldn’t recommend this course enough. I’m now in the job of my dreams and so excited about the future.”`,
+                cite: "Tanya Sinclair",
+                role: "UX Engineer"
+            },
+            {
+                img: "images/image-john.jpg",
+                testimony: `"If you want to lay the best foundation possible I’d recommend taking this course. The depth the instructors go into is incredible. I now feel so confident about starting up as a professional developer. ”`,
+                cite: "John Tarkpor",
+                role: "Junior Front End Developer"
+            }
+        ]
+
+        const state = {
+            userIndex: 0
+        }
+
+        const image = document.querySelector('.slider-image')
+        const testimony = document.getElementsByClassName('testimony-remarks')[0]
+        const cite = document.getElementsByClassName('testimony-cite')[0]
+        const role = document.getElementsByClassName('testimony-role')[0]
+        
+        function updateUI(){
+            image.src = data[state.userIndex].img
+            testimony.textContent = data[state.userIndex].testimony
+            cite.textContent = data[state.userIndex].cite
+            role.textContent = data[state.userIndex].role
+        }
+        const userNumber = data.length - 1
+        
+        function togglePrevBtn(event){
+            if (state.userIndex !== 0) {
+                state.userIndex--
+            } else {
+                state.userIndex = userNumber
+            }
+            console.log(cite)
+            updateUI()
+        }
+
+        function toggleNextBtn(event){
+            if(state.userIndex < userNumber){
+                state.userIndex++
+            }else{
+                state.userIndex = 0
+            }
+            updateUI()
+        }
+        
+        const prevBtn = document.getElementById('prev-btn')
+        const nextBtn = document.getElementById('next-btn')
+        prevBtn.addEventListener('click', togglePrevBtn)
+        nextBtn.addEventListener('click', toggleNextBtn)
+        
+        </script>
 </body>
 </html>
